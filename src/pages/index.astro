@@ -1,0 +1,24 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import Features from '../components/Features.astro';
+import Footer from '../components/Footer.astro';
+
+const pageTitle = "PDFAutomater - Professional PDF Creation Tool | Drag & Drop PDF Editor";
+const pageDescription = "Create professional PDFs with our intuitive drag-and-drop editor. Generate invoices, reports, and documents with powerful data binding and template management. Start free today!";
+const pageKeywords = "PDF creator, PDF generator, invoice generator, document automation, PDF templates, business documents, drag and drop PDF editor, professional PDF creation";
+---
+
+<Layout 
+  title={pageTitle}
+  description={pageDescription}
+  keywords={pageKeywords}
+>
+  <Header />
+  <main>
+    <Hero />
+    <Features />
+  </main>
+  <Footer />
+</Layout>

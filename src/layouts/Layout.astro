@@ -1,0 +1,144 @@
+---
+export interface Props {
+	title: string;
+	description: string;
+	keywords?: string;
+	image?: string;
+	canonical?: string;
+}
+
+const { 
+	title = "PDFAutomater - Professional PDF Creation Tool", 
+	description = "Create professional PDFs with our intuitive drag-and-drop editor. Generate invoices, reports, and documents with powerful data binding and template management.",
+	keywords = "PDF creator, PDF generator, invoice generator, document automation, PDF templates, business documents",
+	image = "/og-image.png",
+	canonical
+} = Astro.props;
+
+const canonicalURL = canonical || new URL(Astro.url.pathname, Astro.site);
+const imageURL = new URL(image, Astro.site);
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="generator" content={Astro.generator} />
+		
+		<!-- SEO Meta Tags -->
+		<title>{title}</title>
+		<meta name="description" content={description} />
+		<meta name="keywords" content={keywords} />
+		<meta name="robots" content="index, follow" />
+		<link rel="canonical" href={canonicalURL} />
+		
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content={canonicalURL} />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:image" content={imageURL} />
+		<meta property="og:site_name" content="PDFAutomater" />
+		
+		<!-- Twitter -->
+		<meta property="twitter:card" content="summary_large_image" />
+		<meta property="twitter:url" content={canonicalURL} />
+		<meta property="twitter:title" content={title} />
+		<meta property="twitter:description" content={description} />
+		<meta property="twitter:image" content={imageURL} />
+		
+		<!-- Favicons -->
+		<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+		<link rel="manifest" href="/site.webmanifest" />
+		
+		<!-- Preconnect to external domains -->
+		<link rel="preconnect" href="https://app.pdfautomater.com" />
+		<link rel="dns-prefetch" href="https://accounts.clerk.dev" />
+		
+		<!-- Schema.org JSON-LD -->
+		<script type="application/ld+json">
+			{
+				"@context": "https://schema.org",
+				"@type": "SoftwareApplication",
+				"name": "PDFAutomater",
+				"applicationCategory": "BusinessApplication",
+				"operatingSystem": "Web",
+				"description": "Professional PDF creation tool with drag-and-drop editor for generating invoices, reports, and business documents",
+				"url": "https://pdfautomater.com",
+				"author": {
+					"@type": "Organization",
+					"name": "PDFAutomater"
+				},
+				"offers": {
+					"@type": "Offer",
+					"price": "0",
+					"priceCurrency": "USD",
+					"availability": "https://schema.org/InStock"
+				},
+				"featureList": [
+					"Drag-and-drop PDF editor",
+					"Template management",
+					"Data binding capabilities", 
+					"Professional PDF generation",
+					"Cloud-based storage",
+					"Real-time preview"
+				],
+				"screenshot": "https://pdfautomater.com/app-screenshot.png"
+			}
+		</script>
+		
+		<!-- Performance optimizations -->
+		<link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin />
+	</head>
+	<body>
+		<slot />
+		
+		<!-- Analytics (placeholder for Google Analytics, etc.) -->
+		<!-- You can add your analytics script here -->
+		
+		<script>
+			// Basic performance monitoring
+			window.addEventListener('load', () => {
+				// Log page load time for monitoring
+				const loadTime = performance.timing.loadEventEnd - performance.timing.navigationStart;
+				console.log('Page load time:', loadTime + 'ms');
+			});
+		</script>
+	</body>
+</html>
+
+<style is:global>
+	@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+	
+	* {
+		box-sizing: border-box;
+	}
+	
+	html {
+		font-family: 'Inter', system-ui, sans-serif;
+		scroll-behavior: smooth;
+	}
+	
+	body {
+		margin: 0;
+		padding: 0;
+		line-height: 1.6;
+		color: #1f2937;
+		background-color: #ffffff;
+	}
+	
+	/* Improve focus visibility for accessibility */
+	*:focus-visible {
+		outline: 2px solid #3b82f6;
+		outline-offset: 2px;
+	}
+	
+	/* Smooth animations */
+	* {
+		transition: all 0.2s ease-in-out;
+	}
+</style>

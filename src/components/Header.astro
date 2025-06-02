@@ -1,0 +1,467 @@
+---
+// Header component for PDFAutomater landing page
+---
+
+<header class="header">
+  <nav class="nav">
+    <div class="nav-container">
+      <!-- Logo -->
+      <div class="nav-brand">
+        <a href="/" class="brand-link">
+          <div class="brand-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+              <polyline points="14,2 14,8 20,8"/>
+              <line x1="16" y1="13" x2="8" y2="13"/>
+              <line x1="16" y1="17" x2="8" y2="17"/>
+              <polyline points="10,9 9,9 8,9"/>
+            </svg>
+          </div>
+          <span class="brand-text">PDFAutomater</span>
+        </a>
+      </div>
+
+      <!-- Desktop Navigation -->
+      <div class="nav-links">
+        <a href="#features" class="nav-link">Features</a>
+        <a href="#pricing" class="nav-link">Pricing</a>
+        <a href="#templates" class="nav-link">Templates</a>
+        <a href="#support" class="nav-link">Support</a>
+      </div>
+
+      <!-- Desktop Auth Buttons -->
+      <div class="nav-auth">
+        <a href="https://app.pdfautomater.com/sign-in" class="auth-link sign-in">
+          Sign In
+        </a>
+        <a href="https://app.pdfautomater.com/sign-up" class="auth-link sign-up">
+          Get Started
+        </a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button class="mobile-menu-btn" aria-label="Toggle mobile menu" id="mobile-menu-btn">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu">
+      <div class="mobile-menu-content">
+        <div class="mobile-nav-links">
+          <a href="#features" class="mobile-nav-link">Features</a>
+          <a href="#pricing" class="mobile-nav-link">Pricing</a>
+          <a href="#templates" class="mobile-nav-link">Templates</a>
+          <a href="#support" class="mobile-nav-link">Support</a>
+        </div>
+        <div class="mobile-auth">
+          <a href="https://app.pdfautomater.com/sign-in" class="mobile-auth-link sign-in">
+            Sign In
+          </a>
+          <a href="https://app.pdfautomater.com/sign-up" class="mobile-auth-link sign-up">
+            Get Started
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<script>
+  // Mobile menu toggle functionality
+  const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  let isMenuOpen = false;
+
+  function toggleMobileMenu() {
+    isMenuOpen = !isMenuOpen;
+    mobileMenu?.classList.toggle('active', isMenuOpen);
+    mobileMenuBtn?.classList.toggle('active', isMenuOpen);
+    document.body.classList.toggle('menu-open', isMenuOpen);
+  }
+
+  mobileMenuBtn?.addEventListener('click', toggleMobileMenu);
+
+  // Close mobile menu when clicking on links
+  const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+  mobileNavLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      if (isMenuOpen) {
+        toggleMobileMenu();
+      }
+    });
+  });
+
+  // Close mobile menu when clicking outside
+  document.addEventListener('click', (e) => {
+    const target = e.target as HTMLElement;
+    if (isMenuOpen && !mobileMenu?.contains(target) && !mobileMenuBtn?.contains(target)) {
+      toggleMobileMenu();
+    }
+  });
+
+  // Handle header background on scroll
+  const header = document.querySelector('.header');
+  let lastScrollY = window.scrollY;
+
+  function updateHeader() {
+    const currentScrollY = window.scrollY;
+    
+    // Add background when scrolled
+    if (currentScrollY > 50) {
+      header?.classList.add('scrolled');
+    } else {
+      header?.classList.remove('scrolled');
+    }
+
+    // Hide/show header based on scroll direction
+    if (currentScrollY > lastScrollY && currentScrollY > 100) {
+      header?.classList.add('hidden');
+    } else {
+      header?.classList.remove('hidden');
+    }
+
+    lastScrollY = currentScrollY;
+  }
+
+  window.addEventListener('scroll', updateHeader);
+  
+  // Smooth scroll for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      const href = this.getAttribute('href');
+      if (href && href !== '#') {
+        const target = document.querySelector(href);
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      }
+    });
+  });
+</script>
+
+<style>
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  }
+
+  .header.scrolled {
+    background: rgba(255, 255, 255, 0.98);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+
+  .header.hidden {
+    transform: translateY(-100%);
+  }
+
+  .nav {
+    position: relative;
+  }
+
+  .nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+  }
+
+  /* Brand */
+  .nav-brand {
+    display: flex;
+    align-items: center;
+    color: #1f2937;
+    transition: color 0.3s ease;
+  }
+
+  .brand-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .brand-icon {
+    color: #3b82f6;
+    transition: color 0.3s ease;
+  }
+
+  .brand-text {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+
+  /* Navigation Links */
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+  }
+
+  .nav-link {
+    color: #4b5563;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    position: relative;
+  }
+
+  .nav-link:hover {
+    color: #1f2937;
+  }
+
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #3b82f6;
+    transition: width 0.3s ease;
+  }
+
+  .nav-link:hover::after {
+    width: 100%;
+  }
+
+  /* Auth Buttons */
+  .nav-auth {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .auth-link {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+  }
+
+  .auth-link.sign-in {
+    color: #4b5563;
+    background: transparent;
+    border: 1px solid #e5e7eb;
+  }
+
+  .auth-link.sign-in:hover {
+    background: #f9fafb;
+    color: #1f2937;
+  }
+
+  .auth-link.sign-up {
+    color: white;
+    background: #3b82f6;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+
+  .auth-link.sign-up:hover {
+    background: #2563eb;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+  }
+
+  /* Mobile Menu Button */
+  .mobile-menu-btn {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 101;
+  }
+
+  .hamburger-line {
+    width: 100%;
+    height: 2px;
+    background: #1f2937;
+    transition: all 0.3s ease;
+    transform-origin: center;
+  }
+
+  .hamburger-line:not(:last-child) {
+    margin-bottom: 5px;
+  }
+
+  .mobile-menu-btn.active .hamburger-line:nth-child(1) {
+    transform: rotate(45deg) translate(7px, 7px);
+  }
+
+  .mobile-menu-btn.active .hamburger-line:nth-child(2) {
+    opacity: 0;
+  }
+
+  .mobile-menu-btn.active .hamburger-line:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+  }
+
+  /* Mobile Menu */
+  .mobile-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+  }
+
+  .mobile-menu.active {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .mobile-menu-content {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .mobile-nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+
+  .mobile-nav-link {
+    color: #1f2937;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1rem;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    transition: color 0.3s ease;
+  }
+
+  .mobile-nav-link:hover {
+    color: #3b82f6;
+  }
+
+  .mobile-auth {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .mobile-auth-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 14px 24px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    text-align: center;
+  }
+
+  .mobile-auth-link.sign-in {
+    color: #1f2937;
+    background: transparent;
+    border: 2px solid #e5e7eb;
+  }
+
+  .mobile-auth-link.sign-in:hover {
+    background: #f9fafb;
+    border-color: #d1d5db;
+  }
+
+  .mobile-auth-link.sign-up {
+    color: white;
+    background: #3b82f6;
+  }
+
+  .mobile-auth-link.sign-up:hover {
+    background: #2563eb;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+  }
+
+  /* Prevent body scroll when mobile menu is open */
+  body.menu-open {
+    overflow: hidden;
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .nav-links,
+    .nav-auth {
+      display: none;
+    }
+
+    .mobile-menu-btn {
+      display: flex;
+    }
+
+    .nav-container {
+      height: 60px;
+    }
+
+    .brand-text {
+      font-size: 1.25rem;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .nav-container {
+      padding: 0 16px;
+    }
+
+    .mobile-auth {
+      gap: 8px;
+    }
+
+    .mobile-auth-link {
+      padding: 12px 20px;
+    }
+  }
+
+  /* Improved focus states for accessibility */
+  .nav-link:focus-visible,
+  .auth-link:focus-visible,
+  .mobile-nav-link:focus-visible,
+  .mobile-auth-link:focus-visible {
+    outline: 2px solid #3b82f6;
+    outline-offset: 2px;
+  }
+
+  .mobile-menu-btn:focus-visible {
+    outline: 2px solid #3b82f6;
+    outline-offset: 4px;
+  }
+</style> 
