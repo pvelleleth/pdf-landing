@@ -1,9 +1,10 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Header from '../components/Header.astro';
-import Hero from '../components/Hero.astro';
+import ModernHeader from '../components/ModernHeader.tsx';
+import ModernHero from '../components/ModernHero.tsx';
 import Features from '../components/Features.astro';
 import Footer from '../components/Footer.astro';
+import { Image } from 'astro:assets';
 
 const pageTitle = "PDFAutomater - Professional PDF Creation Tool | Drag & Drop PDF Editor";
 const pageDescription = "Create professional PDFs with our intuitive drag-and-drop editor. Generate invoices, reports, and documents with powerful data binding and template management. Start free today!";
@@ -15,9 +16,13 @@ const pageKeywords = "PDF creator, PDF generator, invoice generator, document au
   description={pageDescription}
   keywords={pageKeywords}
 >
-  <Header />
+  <ModernHeader client:load>
+    <Image slot="imageComponent" src="/image.png" alt="PDFAutomater Logo" width="70" height="70" loading="eager" />
+  </ModernHeader>
   <main>
-    <Hero />
+    <ModernHero client:load>
+      <Image slot="landingImage" src="/landingpic.png" alt="PDFAutomater App Interface" width="1200" height="800" class="w-full h-auto object-cover" />
+    </ModernHero>
     <Features />
   </main>
   <Footer />

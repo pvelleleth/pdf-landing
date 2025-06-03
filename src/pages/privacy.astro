@@ -1,0 +1,266 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ModernHeader from '../components/ModernHeader.tsx';
+import Footer from '../components/Footer.astro';
+import { Image } from 'astro:assets';
+
+const pageTitle = "Privacy Policy - PDFAutomater | Your Data Protection Rights";
+const pageDescription = "Learn how PDFAutomater protects your privacy and handles your data. Comprehensive privacy policy covering data collection, usage, and your rights.";
+const pageKeywords = "privacy policy, data protection, GDPR, user privacy, data security, PDFAutomater privacy";
+---
+
+<Layout 
+  title={pageTitle}
+  description={pageDescription}
+  keywords={pageKeywords}
+>
+  <ModernHeader client:load>
+    <Image slot="imageComponent" src="/image.png" alt="PDFAutomater Logo" width="70" height="70" loading="eager" />
+  </ModernHeader>
+  
+  <main class="min-h-screen bg-gradient-to-br from-purple-50 via-indigo-50 to-violet-50 pt-0 border-4 border-red-500">
+    <div class="max-w-4xl mx-auto px-6 py-24 mt-20">
+      <!-- Header -->
+      <div class="text-center mb-16">
+        <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          Privacy Policy
+        </h1>
+        <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+          Your privacy is important to us. This policy explains how we collect, use, and protect your information when you use PDFAutomater.
+        </p>
+        <div class="mt-6 text-sm text-gray-500">
+          Last updated: January 2024
+        </div>
+      </div>
+
+      <!-- Content -->
+      <div class="bg-white/60 backdrop-blur-sm rounded-2xl border border-gray-200 p-8 md:p-12">
+        <div class="prose prose-lg max-w-none">
+          
+          <!-- Introduction -->
+          <section class="mb-12">
+            <h2 class="text-2xl font-semibold text-gray-900 mb-4">1. Introduction</h2>
+            <p class="text-gray-700 leading-relaxed mb-4">
+              Welcome to PDFAutomater ("we," "our," or "us"). We are committed to protecting your personal information and your right to privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website and use our PDF creation services.
+            </p>
+            <p class="text-gray-700 leading-relaxed">
+              Please read this privacy policy carefully. If you do not agree with the terms of this privacy policy, please do not access the site or use our services.
+            </p>
+          </section>
+
+          <!-- Information We Collect -->
+          <section class="mb-12">
+            <h2 class="text-2xl font-semibold text-gray-900 mb-4">2. Information We Collect</h2>
+            
+            <h3 class="text-xl font-medium text-gray-800 mb-3">Personal Information</h3>
+            <p class="text-gray-700 leading-relaxed mb-4">
+              We collect personal information that you voluntarily provide to us when you:
+            </p>
+            <ul class="list-disc pl-6 mb-6 text-gray-700 space-y-2">
+              <li>Create an account on our platform</li>
+              <li>Use our PDF creation and editing services</li>
+              <li>Subscribe to our newsletter or marketing communications</li>
+              <li>Contact us for customer support</li>
+              <li>Participate in surveys or promotional activities</li>
+            </ul>
+
+            <h3 class="text-xl font-medium text-gray-800 mb-3">Information Collected Automatically</h3>
+            <p class="text-gray-700 leading-relaxed mb-4">
+              When you visit our website, we automatically collect certain information, including:
+            </p>
+            <ul class="list-disc pl-6 mb-6 text-gray-700 space-y-2">
+              <li>IP address and geographic location</li>
+              <li>Browser type and version</li>
+              <li>Operating system information</li>
+              <li>Pages visited and time spent on our site</li>
+              <li>Referring website addresses</li>
+              <li>Device information and screen resolution</li>
+            </ul>
+
+            <h3 class="text-xl font-medium text-gray-800 mb-3">Document and File Information</h3>
+            <p class="text-gray-700 leading-relaxed">
+              When you use our PDF creation services, we may process and temporarily store your uploaded files, templates, and generated PDFs to provide our services. We implement strong security measures to protect this content.
+            </p>
+          </section>
+
+          <!-- How We Use Information -->
+          <section class="mb-12">
+            <h2 class="text-2xl font-semibold text-gray-900 mb-4">3. How We Use Your Information</h2>
+            <p class="text-gray-700 leading-relaxed mb-4">
+              We use the information we collect for various purposes, including:
+            </p>
+            <ul class="list-disc pl-6 mb-6 text-gray-700 space-y-2">
+              <li>Providing, operating, and maintaining our PDF creation services</li>
+              <li>Improving, personalizing, and expanding our platform</li>
+              <li>Understanding and analyzing how you use our services</li>
+              <li>Developing new features, products, and services</li>
+              <li>Communicating with you about updates, security alerts, and support</li>
+              <li>Processing transactions and sending related information</li>
+              <li>Sending marketing and promotional communications (with your consent)</li>
+              <li>Detecting, preventing, and addressing technical issues and security threats</li>
+            </ul>
+          </section>
+
+          <!-- Information Sharing -->
+          <section class="mb-12">
+            <h2 class="text-2xl font-semibold text-gray-900 mb-4">4. Information Sharing and Disclosure</h2>
+            <p class="text-gray-700 leading-relaxed mb-4">
+              We do not sell, trade, or rent your personal information to third parties. We may share your information only in the following circumstances:
+            </p>
+            <ul class="list-disc pl-6 mb-6 text-gray-700 space-y-2">
+              <li><strong>Service Providers:</strong> With trusted third-party service providers who assist in operating our platform</li>
+              <li><strong>Legal Requirements:</strong> When required by law, court order, or legal process</li>
+              <li><strong>Safety and Security:</strong> To protect the rights, property, or safety of PDFAutomater, our users, or others</li>
+              <li><strong>Business Transfers:</strong> In connection with a merger, acquisition, or sale of assets</li>
+              <li><strong>Consent:</strong> With your explicit consent for any other purpose</li>
+            </ul>
+          </section>
+
+          <!-- Data Security -->
+          <section class="mb-12">
+            <h2 class="text-2xl font-semibold text-gray-900 mb-4">5. Data Security</h2>
+            <p class="text-gray-700 leading-relaxed mb-4">
+              We implement appropriate technical and organizational security measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction. These measures include:
+            </p>
+            <ul class="list-disc pl-6 mb-6 text-gray-700 space-y-2">
+              <li>Encryption of data in transit and at rest</li>
+              <li>Regular security assessments and updates</li>
+              <li>Access controls and authentication mechanisms</li>
+              <li>Secure data centers and infrastructure</li>
+              <li>Employee training on data protection practices</li>
+            </ul>
+            <p class="text-gray-700 leading-relaxed">
+              However, please note that no method of transmission over the internet or electronic storage is 100% secure, and we cannot guarantee absolute security.
+            </p>
+          </section>
+
+          <!-- Cookies and Tracking -->
+          <section class="mb-12">
+            <h2 class="text-2xl font-semibold text-gray-900 mb-4">6. Cookies and Tracking Technologies</h2>
+            <p class="text-gray-700 leading-relaxed mb-4">
+              We use cookies and similar tracking technologies to enhance your experience on our platform. Cookies are small data files stored on your device that help us:
+            </p>
+            <ul class="list-disc pl-6 mb-6 text-gray-700 space-y-2">
+              <li>Remember your preferences and settings</li>
+              <li>Analyze site traffic and usage patterns</li>
+              <li>Provide personalized content and features</li>
+              <li>Improve our services and user experience</li>
+            </ul>
+            <p class="text-gray-700 leading-relaxed">
+              You can control cookie preferences through your browser settings. However, disabling certain cookies may limit some functionality of our services.
+            </p>
+          </section>
+
+          <!-- Your Rights -->
+          <section class="mb-12">
+            <h2 class="text-2xl font-semibold text-gray-900 mb-4">7. Your Privacy Rights</h2>
+            <p class="text-gray-700 leading-relaxed mb-4">
+              Depending on your location, you may have certain rights regarding your personal information:
+            </p>
+            <ul class="list-disc pl-6 mb-6 text-gray-700 space-y-2">
+              <li><strong>Access:</strong> Request copies of your personal information</li>
+              <li><strong>Rectification:</strong> Request correction of inaccurate or incomplete data</li>
+              <li><strong>Erasure:</strong> Request deletion of your personal information</li>
+              <li><strong>Portability:</strong> Request transfer of your data to another service</li>
+              <li><strong>Restriction:</strong> Request limitation of processing of your data</li>
+              <li><strong>Objection:</strong> Object to processing of your personal information</li>
+              <li><strong>Withdrawal:</strong> Withdraw consent for data processing</li>
+            </ul>
+            <p class="text-gray-700 leading-relaxed">
+              To exercise these rights, please contact us using the information provided in the "Contact Us" section below.
+            </p>
+          </section>
+
+          <!-- Data Retention -->
+          <section class="mb-12">
+            <h2 class="text-2xl font-semibold text-gray-900 mb-4">8. Data Retention</h2>
+            <p class="text-gray-700 leading-relaxed mb-4">
+              We retain your personal information only for as long as necessary to fulfill the purposes outlined in this privacy policy, unless a longer retention period is required or permitted by law. Factors we consider when determining retention periods include:
+            </p>
+            <ul class="list-disc pl-6 mb-6 text-gray-700 space-y-2">
+              <li>The nature and sensitivity of the information</li>
+              <li>The purposes for which we process the information</li>
+              <li>Legal and regulatory requirements</li>
+              <li>The potential risk of harm from unauthorized use or disclosure</li>
+            </ul>
+          </section>
+
+          <!-- International Transfers -->
+          <section class="mb-12">
+            <h2 class="text-2xl font-semibold text-gray-900 mb-4">9. International Data Transfers</h2>
+            <p class="text-gray-700 leading-relaxed">
+              Your information may be transferred to and processed in countries other than your country of residence. We ensure that such transfers are conducted in accordance with applicable data protection laws and implement appropriate safeguards to protect your information.
+            </p>
+          </section>
+
+          <!-- Children's Privacy -->
+          <section class="mb-12">
+            <h2 class="text-2xl font-semibold text-gray-900 mb-4">10. Children's Privacy</h2>
+            <p class="text-gray-700 leading-relaxed">
+              Our services are not intended for children under the age of 13. We do not knowingly collect personal information from children under 13. If you are a parent or guardian and believe your child has provided us with personal information, please contact us so we can delete such information.
+            </p>
+          </section>
+
+          <!-- Changes to Policy -->
+          <section class="mb-12">
+            <h2 class="text-2xl font-semibold text-gray-900 mb-4">11. Changes to This Privacy Policy</h2>
+            <p class="text-gray-700 leading-relaxed">
+              We may update this privacy policy from time to time to reflect changes in our practices or for legal, regulatory, or operational reasons. We will notify you of any material changes by posting the updated policy on our website and updating the "Last updated" date. We encourage you to review this policy periodically.
+            </p>
+          </section>
+
+          <!-- Contact Information -->
+          <section class="mb-12">
+            <h2 class="text-2xl font-semibold text-gray-900 mb-4">12. Contact Us</h2>
+            <p class="text-gray-700 leading-relaxed mb-4">
+              If you have any questions, concerns, or requests regarding this privacy policy or our data practices, please contact us:
+            </p>
+            <div class="bg-gray-50 rounded-lg p-6 border border-gray-200">
+              <ul class="text-gray-700 space-y-2">
+                <li><strong>Email:</strong> hello@pdfautomater.com</li>
+                <li><strong>Website:</strong> <a href="https://pdfautomater.com" class="text-blue-600 hover:text-blue-800">https://pdfautomater.com</a></li>
+              </ul>
+            </div>
+            <p class="text-gray-600 text-sm mt-4">
+              We will respond to your inquiry within 30 days of receipt.
+            </p>
+          </section>
+
+        </div>
+      </div>
+
+      <!-- Back to Home -->
+      <div class="text-center mt-12">
+        <a 
+          href="/" 
+          class="inline-flex items-center gap-2 bg-white hover:bg-gray-50 text-blue-600 border border-blue-200 px-6 py-3 rounded-lg font-semibold transition-all duration-200 hover:shadow-lg"
+        >
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+          </svg>
+          Back to Home
+        </a>
+      </div>
+    </div>
+  </main>
+  
+  <Footer />
+</Layout>
+
+<style>
+  .prose h2 {
+    @apply border-b border-gray-200 pb-2;
+  }
+  
+  .prose h3 {
+    @apply text-blue-700;
+  }
+  
+  .prose a {
+    @apply text-blue-600 hover:text-blue-800 underline;
+  }
+  
+  .prose strong {
+    @apply text-gray-900 font-semibold;
+  }
+</style> 
