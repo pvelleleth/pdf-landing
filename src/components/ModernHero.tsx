@@ -6,7 +6,7 @@ interface ModernHeroProps {
 
 const ModernHero = (props: ModernHeroProps) => {
   return (
-    <section className="relative min-h-screen bg-gradient-to-br from-purple-100 via-indigo-100 to-violet-100 overflow-hidden">
+    <section className="relative min-h-screen bg-gradient-to-br from-white via-purple-50 to-indigo-50 overflow-hidden">
       {/* Background decorative elements */}
       <div className="absolute inset-0">
         <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500/20 rounded-full blur-3xl"></div>
@@ -114,7 +114,7 @@ const ModernHero = (props: ModernHeroProps) => {
                   <div className="w-3 h-3 bg-yellow-400 rounded-full"></div>
                   <div className="w-3 h-3 bg-green-400 rounded-full"></div>
                 </div>
-                <div className="ml-4 text-sm text-gray-700">PDFAutomater - PDF Editor</div>
+                <div className="ml-4 text-sm text-gray-700">DynamoPDF - PDF Editor</div>
               </div>
               
               {/* Actual app screenshot */}
