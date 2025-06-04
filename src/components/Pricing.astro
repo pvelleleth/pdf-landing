@@ -1,0 +1,442 @@
+---
+// Pricing component for DynamoPDF landing page
+// Links to app.dynamopdf.com for authentication and sign-up
+---
+
+<section id="pricing" class="pricing">
+  <div class="container">
+    <div class="pricing-header">
+      <h2 class="section-title">
+        Simple, Transparent 
+        <span class="gradient-text">Pricing</span>
+      </h2>
+      <p class="section-subtitle">
+        Choose the perfect plan for your PDF creation needs. Start free and upgrade as you grow.
+      </p>
+    </div>
+
+    <div class="pricing-grid">
+      <!-- Free Plan -->
+      <div class="pricing-card">
+        <div class="plan-header">
+          <h3 class="plan-name">Free</h3>
+          <div class="plan-price">
+            <span class="price-amount">$0</span>
+            <span class="price-period">/month</span>
+          </div>
+          <p class="plan-description">Perfect for getting started</p>
+        </div>
+        
+        <ul class="features-list">
+          <li>✓ 70 PDF generations per month</li>
+          <li>✓ 3 templates</li>
+          <li>✓ Drag & drop editor</li>
+          <li>✓ Cloud storage</li>
+          <li>✓ API access</li>
+          <li>✓ Email support</li>
+        </ul>
+        
+        <a href="https://app.dynamopdf.com/sign-up?plan=free" class="cta-button secondary">
+          Get Started Free
+        </a>
+      </div>
+
+      <!-- Pro Plan -->
+      <div class="pricing-card featured">
+        <div class="popular-badge">Most Popular</div>
+        <div class="plan-header">
+          <h3 class="plan-name">Pro</h3>
+          <div class="plan-price">
+            <span class="price-amount">$25</span>
+            <span class="price-period">/month</span>
+          </div>
+          <p class="plan-description">For growing businesses</p>
+        </div>
+        
+        <ul class="features-list">
+          <li>✓ 3000 PDF generations per month</li>
+          <li>✓ 100 templates</li>
+          <li>✓ Drag & drop editor</li>
+          <li>✓ Cloud storage</li>
+          <li>✓ API access</li>
+          <li>✓ Priority support</li>
+        </ul>
+        
+        <a href="https://app.dynamopdf.com/sign-up?plan=pro" class="cta-button primary">
+          Get Started
+        </a>
+      </div>
+
+      <!-- Business Plan -->
+      <div class="pricing-card">
+        <div class="plan-header">
+          <h3 class="plan-name">Enterprise</h3>
+          <div class="plan-price">
+            <span class="price-amount">Contact Us</span>
+            <span class="price-period"></span>
+          </div>
+          <p class="plan-description">For large teams and enterprises</p>
+        </div>
+        
+        <ul class="features-list">
+          <li>✓ Unlimited PDF generations</li>
+          <li>✓ Unlimited templates</li>
+          <li>✓ White-label solution</li>
+          <li>✓ API access</li>
+          <li>✓ Custom workflows and templates</li>
+          <li>✓ SSO authentication</li>
+          <li>✓ Dedicated support</li>
+        </ul>
+        
+        <a href="mailto:sales@dynamopdf.com" class="cta-button secondary">
+          Contact Sales
+        </a>
+      </div>
+    </div>
+
+    <!-- Call to Action -->
+    <div class="pricing-cta">
+      <h3 class="cta-title">Ready to transform your document workflow?</h3>
+      <p class="cta-subtitle">Start creating professional PDFs in minutes, not hours.</p>
+      <div class="cta-buttons">
+        <a href="https://app.dynamopdf.com/sign-up" class="btn-primary">
+          Get Started
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+        <a href="#demo" class="btn-secondary">
+          View Demo
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .pricing {
+    padding: 120px 0;
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    position: relative;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  .pricing-header {
+    text-align: center;
+    margin-bottom: 80px;
+  }
+
+  .section-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 24px;
+    color: #1e293b;
+  }
+
+  .gradient-text {
+    background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .section-subtitle {
+    font-size: 1.25rem;
+    color: #64748b;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+
+  .pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 32px;
+    margin-bottom: 80px;
+  }
+
+  .pricing-card {
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    position: relative;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+  }
+
+  .pricing-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+  }
+
+  .pricing-card.featured {
+    border-color: #3b82f6;
+    transform: scale(1.05);
+  }
+
+  .pricing-card.featured:hover {
+    transform: scale(1.05) translateY(-8px);
+  }
+
+  .popular-badge {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+    color: white;
+    padding: 8px 24px;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  .plan-header {
+    text-align: center;
+    margin-bottom: 32px;
+  }
+
+  .plan-name {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 12px;
+  }
+
+  .plan-price {
+    margin-bottom: 12px;
+  }
+
+  .price-amount {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #1e293b;
+  }
+
+  .price-period {
+    font-size: 1rem;
+    color: #64748b;
+    font-weight: 500;
+  }
+
+  .plan-description {
+    color: #64748b;
+    font-size: 1rem;
+  }
+
+  .features-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 40px 0;
+  }
+
+  .features-list li {
+    padding: 12px 0;
+    color: #374151;
+    font-size: 1rem;
+    border-bottom: 1px solid #f1f5f9;
+  }
+
+  .features-list li:last-child {
+    border-bottom: none;
+  }
+
+  .cta-button {
+    display: block;
+    width: 100%;
+    padding: 16px 24px;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 1rem;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+  }
+
+  .cta-button.primary {
+    background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+    color: white;
+  }
+
+  .cta-button.primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(59, 130, 246, 0.3);
+  }
+
+  .cta-button.secondary {
+    background: white;
+    color: #3b82f6;
+    border-color: #3b82f6;
+  }
+
+  .cta-button.secondary:hover {
+    background: #3b82f6;
+    color: white;
+    transform: translateY(-2px);
+  }
+
+  /* Call to Action Section */
+  .pricing-cta {
+    text-align: center;
+    background: white;
+    padding: 60px 40px;
+    border-radius: 20px;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border: 2px solid transparent;
+  }
+
+  .cta-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 0 0 16px 0;
+    line-height: 1.2;
+    color: #1e293b;
+  }
+
+  .cta-subtitle {
+    font-size: 1.25rem;
+    margin: 0 0 32px 0;
+    color: #64748b;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 32px;
+  }
+
+  .cta-buttons {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 16px 32px;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  .btn-primary:hover {
+    background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(59, 130, 246, 0.3);
+  }
+
+  .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: transparent;
+    color: #3b82f6;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 16px 32px;
+    border-radius: 12px;
+    border: 2px solid #3b82f6;
+    transition: all 0.3s ease;
+  }
+
+  .btn-secondary:hover {
+    background: #3b82f6;
+    color: white;
+    transform: translateY(-2px);
+  }
+
+  .pricing-footer {
+    text-align: center;
+    color: #64748b;
+    font-size: 0.875rem;
+  }
+
+  .pricing-footer p {
+    margin: 8px 0;
+  }
+
+  .pricing-footer a {
+    color: #3b82f6;
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  .pricing-footer a:hover {
+    text-decoration: underline;
+  }
+
+  @media (max-width: 768px) {
+    .pricing {
+      padding: 80px 0;
+    }
+
+    .section-title {
+      font-size: 2.5rem;
+    }
+
+    .pricing-grid {
+      gap: 24px;
+    }
+
+    .pricing-card {
+      padding: 32px 24px;
+    }
+
+    .pricing-card.featured {
+      transform: none;
+    }
+
+    .pricing-card.featured:hover {
+      transform: translateY(-8px);
+    }
+
+    .pricing-cta {
+      padding: 40px 24px;
+    }
+
+    .cta-title {
+      font-size: 2rem;
+    }
+
+    .cta-buttons {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+      width: 100%;
+      max-width: 280px;
+      justify-content: center;
+    }
+  }
+
+  /* Accessibility improvements */
+  .pricing-card:focus-within,
+  .pricing-cta:focus-within {
+    outline: 2px solid #3b82f6;
+    outline-offset: 2px;
+  }
+
+  .btn-primary:focus-visible,
+  .btn-secondary:focus-visible,
+  .cta-button:focus-visible {
+    outline: 2px solid #3b82f6;
+    outline-offset: 2px;
+  }
+</style> 

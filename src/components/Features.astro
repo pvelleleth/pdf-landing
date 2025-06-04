@@ -133,23 +133,6 @@
         </div>
       </div>
     </div>
-
-    <!-- Call to Action -->
-    <div class="features-cta">
-      <h3 class="cta-title">Ready to transform your document workflow?</h3>
-      <p class="cta-subtitle">Start creating professional PDFs in minutes, not hours.</p>
-      <div class="cta-buttons">
-        <a href="https://app.dynamopdf.com/sign-up" class="btn-primary">
-          Get Started
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#281E5D" stroke-width="2">
-            <path d="M5 12h14M12 5l7 7-7 7"/>
-          </svg>
-        </a>
-        <a href="#demo" class="btn-secondary">
-          View Demo
-        </a>
-      </div>
-    </div>
   </div>
 </section>
 
@@ -203,7 +186,6 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 32px;
-    margin-bottom: 100px;
   }
 
   .feature-card {
@@ -267,81 +249,6 @@
     border: 1px solidrgb(225, 223, 234);
   }
 
-  /* Call to Action */
-  .features-cta {
-    text-align: center;
-    background: #f8fafc;
-    padding: 60px 40px;
-    border-radius: 12px;
-    position: relative;
-    border: 1px solid #e2e8f0;
-  }
-
-  .cta-title {
-    font-size: 2rem;
-    font-weight: 700;
-    margin: 0 0 16px 0;
-    line-height: 1.2;
-    color: #1f2937;
-  }
-
-  .cta-subtitle {
-    font-size: 1.125rem;
-    margin: 0 0 32px 0;
-    color: #6b7280;
-    max-width: 500px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 32px;
-  }
-
-  .cta-buttons {
-    display: flex;
-    gap: 16px;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-
-  .btn-primary {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    background: linear-gradient(135deg, #2563eb 0%, #9333ea 100%);
-    color: white;
-    text-decoration: none;
-    font-weight: 600;
-    padding: 16px 32px;
-    border-radius: 8px;
-    transition: all 0.3s ease;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-  }
-
-  .btn-primary:hover {
-    background: linear-gradient(135deg, #1d4ed8 0%, #7e22ce 100%);
-    transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(147, 51, 234, 0.3);
-  }
-
-  .btn-secondary {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    background: transparent;
-    color: #9333ea;
-    text-decoration: none;
-    font-weight: 500;
-    padding: 16px 32px;
-    border-radius: 8px;
-    border: 1px solid #e5e7eb;
-    transition: all 0.3s ease;
-  }
-
-  .btn-secondary:hover {
-    background: #f8fafc;
-    border-color: #9333ea;
-    transform: translateY(-1px);
-  }
-
   /* Responsive Design */
   @media (max-width: 768px) {
     .features {
@@ -359,31 +266,10 @@
     .features-grid {
       grid-template-columns: 1fr;
       gap: 24px;
-      margin-bottom: 60px;
     }
 
     .feature-card {
       padding: 24px 20px;
-    }
-
-    .features-cta {
-      padding: 40px 24px;
-    }
-
-    .cta-title {
-      font-size: 1.75rem;
-    }
-
-    .cta-buttons {
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .btn-primary,
-    .btn-secondary {
-      width: 100%;
-      max-width: 280px;
-      justify-content: center;
     }
   }
 
@@ -395,12 +281,6 @@
 
   /* Accessibility improvements */
   .feature-card:focus-within {
-    outline: 2px solid #9333ea;
-    outline-offset: 2px;
-  }
-
-  .btn-primary:focus-visible,
-  .btn-secondary:focus-visible {
     outline: 2px solid #9333ea;
     outline-offset: 2px;
   }

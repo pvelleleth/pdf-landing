@@ -5,7 +5,10 @@ import tailwind from '@astrojs/tailwind';
 
 export default defineConfig({
   site: 'https://dynamopdf.com',
-  integrations: [react(), tailwind()],
+  integrations: [
+    react(), 
+    tailwind()
+  ],
   build: {
     inlineStylesheets: 'auto',
   },
