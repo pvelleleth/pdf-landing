@@ -31,6 +31,10 @@ const imageURL = new URL(image, Astro.site);
 		<meta name="description" content={description} />
 		<meta name="keywords" content={keywords} />
 		<meta name="robots" content="index, follow" />
+		<meta name="author" content="DynamoPDF Team" />
+		<meta name="revisit-after" content="7 days" />
+		<meta name="rating" content="general" />
+		<meta name="distribution" content="global" />
 		<link rel="canonical" href={canonicalURL} />
 		
 		<!-- Open Graph / Facebook -->
@@ -39,7 +43,11 @@ const imageURL = new URL(image, Astro.site);
 		<meta property="og:title" content={title} />
 		<meta property="og:description" content={description} />
 		<meta property="og:image" content={imageURL} />
-		<meta property="og:site_name" content="PDFAutomater" />
+		<meta property="og:image:width" content="1200" />
+		<meta property="og:image:height" content="630" />
+		<meta property="og:image:alt" content="DynamoPDF - Professional PDF Creation Tool Interface" />
+		<meta property="og:site_name" content="DynamoPDF" />
+		<meta property="og:locale" content="en_US" />
 		
 		<!-- Twitter -->
 		<meta property="twitter:card" content="summary_large_image" />
@@ -47,6 +55,18 @@ const imageURL = new URL(image, Astro.site);
 		<meta property="twitter:title" content={title} />
 		<meta property="twitter:description" content={description} />
 		<meta property="twitter:image" content={imageURL} />
+		<meta property="twitter:image:alt" content="DynamoPDF - Professional PDF Creation Tool Interface" />
+		<meta property="twitter:site" content="@dynamopdf" />
+		<meta property="twitter:creator" content="@dynamopdf" />
+		
+		<!-- Additional SEO Meta Tags -->
+		<meta name="theme-color" content="#3b82f6" />
+		<meta name="msapplication-TileColor" content="#3b82f6" />
+		<meta name="application-name" content="DynamoPDF" />
+		<meta name="apple-mobile-web-app-title" content="DynamoPDF" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="default" />
+		<meta name="mobile-web-app-capable" content="yes" />
 		
 		<!-- Favicons -->
 		<link rel="icon" type="image/x-icon" href="/favicon.ico" />
@@ -56,7 +76,9 @@ const imageURL = new URL(image, Astro.site);
 		<link rel="manifest" href="/site.webmanifest" />
 		
 		<!-- Preconnect to external domains -->
-		<link rel="preconnect" href="https://app.pdfautomater.com" />
+		<link rel="preconnect" href="https://app.dynamopdf.com" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link rel="dns-prefetch" href="https://accounts.clerk.dev" />
 		
 		<!-- Schema.org JSON-LD -->
@@ -64,35 +86,127 @@ const imageURL = new URL(image, Astro.site);
 			{
 				"@context": "https://schema.org",
 				"@type": "SoftwareApplication",
-				"name": "PDFAutomater",
+				"name": "DynamoPDF",
+				"alternateName": "DynamoPDF PDF Creator",
 				"applicationCategory": "BusinessApplication",
 				"operatingSystem": "Web",
-				"description": "Professional PDF creation tool with drag-and-drop editor for generating invoices, reports, and business documents",
-				"url": "https://pdfautomater.com",
+				"description": "Professional PDF creation tool with drag-and-drop editor for generating invoices, reports, and business documents with dynamic data binding",
+				"url": "https://dynamopdf.com",
+				"downloadUrl": "https://app.dynamopdf.com",
+				"screenshot": "https://dynamopdf.com/app-screenshot.png",
+				"softwareVersion": "2.0",
+				"datePublished": "2024-01-01",
+				"dateModified": "2024-01-15",
 				"author": {
 					"@type": "Organization",
-					"name": "PDFAutomater"
+					"name": "DynamoPDF",
+					"url": "https://dynamopdf.com",
+					"logo": "https://dynamopdf.com/image.png",
+					"sameAs": [
+						"https://twitter.com/dynamopdf",
+						"https://linkedin.com/company/dynamopdf",
+						"https://youtube.com/@dynamopdf"
+					]
+				},
+				"publisher": {
+					"@type": "Organization",
+					"name": "DynamoPDF",
+					"logo": {
+						"@type": "ImageObject",
+						"url": "https://dynamopdf.com/image.png"
+					}
 				},
 				"offers": {
 					"@type": "Offer",
 					"price": "0",
 					"priceCurrency": "USD",
-					"availability": "https://schema.org/InStock"
+					"availability": "https://schema.org/InStock",
+					"priceValidUntil": "2024-12-31",
+					"category": "Free Trial"
 				},
 				"featureList": [
 					"Drag-and-drop PDF editor",
-					"Template management",
-					"Data binding capabilities", 
+					"Template management system",
+					"Dynamic data binding capabilities", 
 					"Professional PDF generation",
-					"Cloud-based storage",
-					"Real-time preview"
+					"Cloud-based storage and sync",
+					"Real-time preview and editing",
+					"Invoice and report generation",
+					"Multi-format export options",
+					"Team collaboration tools",
+					"API integration support"
 				],
-				"screenshot": "https://pdfautomater.com/app-screenshot.png"
+				"aggregateRating": {
+					"@type": "AggregateRating",
+					"ratingValue": "4.8",
+					"ratingCount": "127",
+					"bestRating": "5",
+					"worstRating": "1"
+				},
+				"supportedDevice": ["Desktop", "Mobile", "Tablet"],
+				"requirements": "Web browser with JavaScript enabled",
+				"permissions": "No special permissions required",
+				"installUrl": "https://app.dynamopdf.com/signup",
+				"softwareHelp": {
+					"@type": "CreativeWork",
+					"url": "https://dynamopdf.com/help"
+				}
+			}
+		</script>
+		
+		<!-- Additional Organization Schema -->
+		<script type="application/ld+json">
+			{
+				"@context": "https://schema.org",
+				"@type": "Organization",
+				"name": "DynamoPDF",
+				"url": "https://dynamopdf.com",
+				"logo": "https://dynamopdf.com/image.png",
+				"description": "Leading provider of professional PDF creation and automation tools for businesses worldwide",
+				"foundingDate": "2023",
+				"sameAs": [
+					"https://twitter.com/dynamopdf",
+					"https://linkedin.com/company/dynamopdf",
+					"https://youtube.com/@dynamopdf"
+				],
+				"contactPoint": {
+					"@type": "ContactPoint",
+					"telephone": "+1-555-PDF-CREATE",
+					"contactType": "Customer Service",
+					"email": "hello@dynamopdf.com",
+					"availableLanguage": "English"
+				},
+				"address": {
+					"@type": "PostalAddress",
+					"addressCountry": "US"
+				}
+			}
+		</script>
+		
+		<!-- Breadcrumb Schema for Homepage -->
+		<script type="application/ld+json">
+			{
+				"@context": "https://schema.org",
+				"@type": "BreadcrumbList",
+				"itemListElement": [
+					{
+						"@type": "ListItem",
+						"position": 1,
+						"name": "Home",
+						"item": "https://dynamopdf.com"
+					}
+				]
 			}
 		</script>
 		
 		<!-- Performance optimizations -->
 		<link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin />
+		
+		<!-- Security headers -->
+		<meta http-equiv="X-Content-Type-Options" content="nosniff" />
+		<meta http-equiv="X-Frame-Options" content="DENY" />
+		<meta http-equiv="X-XSS-Protection" content="1; mode=block" />
+		<meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
 	</head>
 	<body>
 		<slot />

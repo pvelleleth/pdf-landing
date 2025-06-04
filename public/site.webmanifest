@@ -1,0 +1,90 @@
+{
+  "name": "DynamoPDF - Professional PDF Creator",
+  "short_name": "DynamoPDF",
+  "description": "Create professional PDFs with our intuitive drag-and-drop editor. Generate invoices, reports, and documents with powerful data binding.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#3b82f6",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "en",
+  "categories": ["business", "productivity", "utilities"],
+  "screenshots": [
+    {
+      "src": "/app-screenshot-mobile.png",
+      "sizes": "640x1136",
+      "type": "image/png",
+      "platform": "mobile",
+      "label": "DynamoPDF mobile interface"
+    },
+    {
+      "src": "/app-screenshot-desktop.png", 
+      "sizes": "1280x720",
+      "type": "image/png",
+      "platform": "wide",
+      "label": "DynamoPDF desktop interface"
+    }
+  ],
+  "icons": [
+    {
+      "src": "/favicon-16x16.png",
+      "sizes": "16x16",
+      "type": "image/png",
+      "purpose": "favicon"
+    },
+    {
+      "src": "/favicon-32x32.png",
+      "sizes": "32x32", 
+      "type": "image/png",
+      "purpose": "favicon"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "apple touch icon"
+    },
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png", 
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Create New PDF",
+      "short_name": "New PDF",
+      "description": "Create a new PDF document",
+      "url": "/app/create",
+      "icons": [
+        {
+          "src": "/shortcut-create.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Templates",
+      "short_name": "Templates", 
+      "description": "Browse PDF templates",
+      "url": "/templates",
+      "icons": [
+        {
+          "src": "/shortcut-templates.png",
+          "sizes": "96x96"
+        }
+      ]
+    }
+  ],
+  "prefer_related_applications": false,
+  "related_applications": [],
+  "dir": "ltr"
+} 

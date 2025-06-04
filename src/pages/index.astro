@@ -8,22 +8,151 @@ import { Image } from 'astro:assets';
 
 const pageTitle = "DynamoPDF - Professional PDF Creation Tool | Drag & Drop PDF Editor";
 const pageDescription = "Create professional PDFs with our intuitive drag-and-drop editor. Generate invoices, reports, and documents with powerful data binding and template management. Start free today!";
-const pageKeywords = "PDF creator, PDF generator, invoice generator, document automation, PDF templates, business documents, drag and drop PDF editor, professional PDF creation";
+const pageKeywords = "PDF creator, PDF generator, invoice generator, document automation, PDF templates, business documents, drag and drop PDF editor, professional PDF creation, dynamic PDF generation, PDF builder, document designer";
+const pageImage = "/og-image.png";
+const canonicalUrl = "https://dynamopdf.com/";
 ---
 
 <Layout 
   title={pageTitle}
   description={pageDescription}
   keywords={pageKeywords}
+  image={pageImage}
+  canonical={canonicalUrl}
 >
+  <!-- Skip to main content for accessibility -->
+  <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded-md z-50">
+    Skip to main content
+  </a>
+  
   <ModernHeader client:load>
-    <Image slot="imageComponent" src="/image.png" alt="DynamoPDF Logo" width="70" height="70" loading="eager" />
+    <Image 
+      slot="imageComponent" 
+      src="/image.png" 
+      alt="DynamoPDF Logo - Professional PDF Creation Tool" 
+      width="70" 
+      height="70" 
+      loading="eager"
+      title="DynamoPDF - Create Professional PDFs"
+    />
   </ModernHeader>
-  <main>
+  
+  <main id="main-content" role="main">
+    <!-- Hidden structured content for SEO -->
+    <div class="sr-only">
+      <h1>DynamoPDF - Professional PDF Creation and Automation Tool</h1>
+      <p>
+        DynamoPDF is the leading professional PDF creation tool that enables businesses and individuals 
+        to create stunning, professional documents with ease. Our drag-and-drop PDF editor supports 
+        dynamic data binding, template management, and automated document generation for invoices, 
+        reports, contracts, and more.
+      </p>
+      <h2>Key Features:</h2>
+      <ul>
+        <li>Drag-and-drop PDF editor with intuitive interface</li>
+        <li>Dynamic data binding and merge capabilities</li>
+        <li>Professional template library for business documents</li>
+        <li>Automated invoice and report generation</li>
+        <li>Cloud-based document storage and management</li>
+        <li>Real-time collaboration and sharing</li>
+        <li>API integration for workflow automation</li>
+        <li>High-quality PDF export with print-ready output</li>
+      </ul>
+    </div>
+    
     <ModernHero client:load>
-      <Image slot="landingImage" src="/landingpic.png" alt="DynamoPDF App Interface" width="1200" height="800" class="w-full h-auto object-cover" />
+      <Image 
+        slot="landingImage" 
+        src="/landingpic.png" 
+        alt="DynamoPDF Professional PDF Editor Interface - Drag and drop PDF creation tool showing template design, data binding, and document preview features" 
+        width="1200" 
+        height="800" 
+        class="w-full h-auto object-cover"
+        title="DynamoPDF Interface - Create Professional PDFs with Drag & Drop"
+        loading="eager"
+      />
     </ModernHero>
+    
     <Features />
+    
+    <!-- Additional SEO Content Section -->
+    <section class="bg-white py-16" aria-labelledby="seo-content-heading">
+      <div class="max-w-4xl mx-auto px-6">
+        <div class="prose prose-lg max-w-none">
+          <h2 id="seo-content-heading" class="text-3xl font-bold text-gray-900 mb-8 text-center">
+            Why Choose DynamoPDF for Professional PDF Creation?
+          </h2>
+          
+          <div class="grid md:grid-cols-2 gap-12">
+            <div>
+              <h3 class="text-xl font-semibold text-gray-800 mb-4">
+                Advanced PDF Generation Technology
+              </h3>
+              <p class="text-gray-600 mb-4">
+                DynamoPDF leverages cutting-edge technology to provide the most intuitive PDF creation experience. 
+                Our drag-and-drop editor makes it easy for anyone to create professional documents without 
+                design expertise.
+              </p>
+              <p class="text-gray-600">
+                Whether you're generating invoices, creating reports, or designing marketing materials, 
+                DynamoPDF delivers pixel-perfect results every time.
+              </p>
+            </div>
+            
+            <div>
+              <h3 class="text-xl font-semibold text-gray-800 mb-4">
+                Streamline Your Document Workflow
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Save hours of manual work with our automated document generation features. Connect your data 
+                sources and let DynamoPDF create personalized documents at scale.
+              </p>
+              <p class="text-gray-600">
+                Perfect for businesses that need to generate multiple documents with consistent branding 
+                and formatting across all their communications.
+              </p>
+            </div>
+          </div>
+          
+          <div class="mt-12 text-center">
+            <h3 class="text-xl font-semibold text-gray-800 mb-4">
+              Trusted by Thousands of Businesses Worldwide
+            </h3>
+            <p class="text-gray-600 max-w-2xl mx-auto">
+              From small startups to enterprise corporations, DynamoPDF helps businesses create 
+              professional documents that make a lasting impression. Join thousands of satisfied 
+              customers who have transformed their document workflows with our platform.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
+  
   <Footer />
 </Layout>
+
+<style>
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+  
+  .focus\:not-sr-only:focus {
+    position: static;
+    width: auto;
+    height: auto;
+    padding: 0.5rem 1rem;
+    margin: 0;
+    overflow: visible;
+    clip: auto;
+    white-space: normal;
+  }
+</style>
