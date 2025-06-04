@@ -4,7 +4,7 @@ import react from '@astrojs/react';
 import tailwind from '@astrojs/tailwind';
 
 export default defineConfig({
-  site: 'https://pdfautomater.com',
+  site: 'https://dynamopdf.com',
   integrations: [react(), tailwind()],
   build: {
     inlineStylesheets: 'auto',

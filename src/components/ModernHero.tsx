@@ -51,7 +51,7 @@ const ModernHero = (props: ModernHeroProps) => {
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
             <a 
-              href="https://app.pdfautomater.com/signup" 
+              href="https://app.dynamopdf.com/signup" 
               className="group bg-white hover:bg-gray-50 text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-200 transform hover:scale-105 hover:shadow-xl flex items-center gap-2"
             >
               Start Creating for Free
