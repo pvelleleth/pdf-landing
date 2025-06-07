@@ -53,11 +53,9 @@ import { Image } from 'astro:assets';
         <h3 class="footer-title">Product</h3>
         <ul class="footer-links">
           <li><a href="#features" class="footer-link">Features</a></li>
-          <li><a href="#templates" class="footer-link">Templates</a></li>
           <li><a href="#pricing" class="footer-link">Pricing</a></li>
           <li><a href="https://app.dynamopdf.com" class="footer-link">Web App</a></li>
-          <li><a href="/api-docs" class="footer-link">API Documentation</a></li>
-          <li><a href="/integrations" class="footer-link">Integrations</a></li>
+          <li><a href="https://docs.dynamopdf.com" class="footer-link">API Documentation</a></li>
         </ul>
       </div>
 
@@ -65,12 +63,8 @@ import { Image } from 'astro:assets';
       <div class="footer-section">
         <h3 class="footer-title">Resources</h3>
         <ul class="footer-links">
-          <li><a href="/blog" class="footer-link">Blog</a></li>
-          <li><a href="/help" class="footer-link">Help Center</a></li>
-          <li><a href="/guides" class="footer-link">User Guides</a></li>
-          <li><a href="/tutorials" class="footer-link">Video Tutorials</a></li>
-          <li><a href="/changelog" class="footer-link">Changelog</a></li>
-          <li><a href="/status" class="footer-link">System Status</a></li>
+          <li><a href="mailto:hello@dynamopdf.com" class="footer-link">Help & Support</a></li>
+          <li><a href="mailto:hello@dynamopdf.com" class="footer-link">Contact Us</a></li>
         </ul>
       </div>
 
@@ -78,25 +72,8 @@ import { Image } from 'astro:assets';
       <div class="footer-section">
         <h3 class="footer-title">Company</h3>
         <ul class="footer-links">
-          <li><a href="/about" class="footer-link">About Us</a></li>
-          <li><a href="/careers" class="footer-link">Careers</a></li>
-          <li><a href="/contact" class="footer-link">Contact</a></li>
-          <li><a href="/press" class="footer-link">Press Kit</a></li>
-          <li><a href="/partners" class="footer-link">Partners</a></li>
-          <li><a href="/affiliate" class="footer-link">Affiliate Program</a></li>
-        </ul>
-      </div>
-
-      <!-- Support -->
-      <div class="footer-section">
-        <h3 class="footer-title">Support</h3>
-        <ul class="footer-links">
-          <li><a href="/support" class="footer-link">Help & Support</a></li>
-          <li><a href="mailto:hello@dynamopdf.com" class="footer-link">Email Support</a></li>
-          <li><a href="/community" class="footer-link">Community</a></li>
-          <li><a href="/feedback" class="footer-link">Feature Requests</a></li>
-          <li><a href="/security" class="footer-link">Security</a></li>
-          <li><a href="/compliance" class="footer-link">Compliance</a></li>
+          <li><a href="mailto:hello@dynamopdf.com" class="footer-link">About</a></li>
+          <li><a href="mailto:hello@dynamopdf.com" class="footer-link">Contact</a></li>
         </ul>
       </div>
     </div>
@@ -144,8 +121,6 @@ import { Image } from 'astro:assets';
           <div class="legal-links">
             <a href="/privacy" class="legal-link">Privacy Policy</a>
             <a href="/terms" class="legal-link">Terms of Service</a>
-            <a href="/cookies" class="legal-link">Cookie Policy</a>
-            <a href="/dmca" class="legal-link">DMCA</a>
           </div>
         </div>
        
@@ -173,7 +148,7 @@ import { Image } from 'astro:assets';
   /* Main Footer Content */
   .footer-content {
     display: grid;
-    grid-template-columns: 2fr repeat(4, 1fr);
+    grid-template-columns: 2fr repeat(3, 1fr);
     gap: 48px;
     padding: 80px 0 60px 0;
     border-bottom: 1px solid #e5e7eb;
@@ -432,10 +407,7 @@ import { Image } from 'astro:assets';
     }
 
     .footer-section:nth-child(n+4) {
-      grid-column: 2 / -1;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 40px;
+      display: block;
     }
   }
 
