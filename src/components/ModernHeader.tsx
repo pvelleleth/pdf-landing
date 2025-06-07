@@ -119,7 +119,7 @@ const ModernHeader = (props: ModernHeaderProps) => {
               </a>
               <div className="pt-3 border-t border-gray-200 flex flex-col space-y-2">
                 <a 
-                  href="https://app.dynamopdf.com/signin" 
+                  href="https://app.dynamopdf.com/login" 
                   className="text-gray-700 hover:text-blue-600 font-medium py-2 px-4 rounded-lg hover:bg-gray-50 transition-colors duration-200"
                 >
                   Sign In
