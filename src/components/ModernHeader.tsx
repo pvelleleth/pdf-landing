@@ -59,7 +59,7 @@ const ModernHeader = (props: ModernHeaderProps) => {
           {/* Desktop Auth Buttons */}
           <div className="hidden md:flex items-center space-x-4">
             <a 
-              href="https://app.dynamopdf.com/signin" 
+              href="https://app.dynamopdf.com/login" 
               className="text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200"
             >
               Sign In
