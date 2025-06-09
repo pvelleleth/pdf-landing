@@ -2,12 +2,14 @@
 import { defineConfig } from 'astro/config';
 import react from '@astrojs/react';
 import tailwind from '@astrojs/tailwind';
+import mdx from '@astrojs/mdx';
 
 export default defineConfig({
   site: 'https://dynamopdf.com',
   integrations: [
-    react(), 
-    tailwind()
+    react(),
+    tailwind(),
+    mdx()
   ],
   build: {
     inlineStylesheets: 'auto',

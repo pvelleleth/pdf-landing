@@ -42,11 +42,11 @@ const ModernHeader = (props: ModernHeaderProps) => {
             >
               Features
             </a>
-            <a 
-              href="#templates" 
+            <a
+              href="/blog"
               className="text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200"
             >
-              Templates
+              Blog
             </a>
             <a 
               href="#pricing" 
@@ -105,11 +105,11 @@ const ModernHeader = (props: ModernHeaderProps) => {
               >
                 Features
               </a>
-              <a 
-                href="#templates" 
+              <a
+                href="/blog"
                 className="text-gray-700 hover:text-blue-600 font-medium py-2 px-4 rounded-lg hover:bg-gray-50 transition-colors duration-200"
               >
-                Templates
+                Blog
               </a>
               <a 
                 href="#pricing" 

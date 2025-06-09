@@ -1,0 +1,23 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ModernHeader from '../components/ModernHeader.tsx';
+import Footer from '../components/Footer.astro';
+import { Image } from 'astro:assets';
+import BlogContent from '../content/getting-started-with-curatepdf.mdx';
+
+const pageTitle = 'Getting Started with CuratePDF | CuratePDF Blog';
+const pageDescription = 'Learn how to create your first document and automate PDFs using CuratePDF.';
+const pageKeywords = 'CuratePDF tutorial, PDF automation, drag and drop editor';
+---
+
+<Layout title={pageTitle} description={pageDescription} keywords={pageKeywords} image="/landingpic.png" canonical="https://curatepdf.com/blog">
+  <ModernHeader client:load>
+    <Image slot="imageComponent" src="/image.png" alt="CuratePDF Logo" width="70" height="70" loading="eager" title="CuratePDF" />
+  </ModernHeader>
+
+  <main class="max-w-3xl mx-auto px-6 py-16 prose prose-blue">
+    <BlogContent />
+  </main>
+
+  <Footer />
+</Layout>
