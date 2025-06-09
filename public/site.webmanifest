@@ -1,7 +1,7 @@
 {
-  "name": "DynamoPDF - Professional PDF Creator",
-  "short_name": "DynamoPDF",
-  "description": "Create professional PDFs with our intuitive drag-and-drop editor. Generate invoices, reports, and documents with powerful data binding.",
+  "name": "CuratePDF - Professional PDF Creator",
+  "short_name": "CuratePDF",
+  "description": "Create professional PDFs with our intuitive drag-and-drop editor. Generate invoices, reports, and documents with dynamic data.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
@@ -16,14 +16,14 @@
       "sizes": "640x1136",
       "type": "image/png",
       "platform": "mobile",
-      "label": "DynamoPDF mobile interface"
+      "label": "CuratePDF mobile interface"
     },
     {
       "src": "/app-screenshot-desktop.png", 
       "sizes": "1280x720",
       "type": "image/png",
       "platform": "wide",
-      "label": "DynamoPDF desktop interface"
+      "label": "CuratePDF desktop interface"
     }
   ],
   "icons": [

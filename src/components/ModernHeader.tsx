@@ -31,7 +31,7 @@ const ModernHeader = (props: ModernHeaderProps) => {
           <div className="flex items-center space-x-1">
             {props.imageComponent}
             
-            <span className="text-2xl font-bold text-gray-800">DynamoPDF</span>
+            <span className="text-2xl font-bold text-gray-800">CuratePDF</span>
           </div>
 
           {/* Desktop Navigation */}
@@ -59,13 +59,13 @@ const ModernHeader = (props: ModernHeaderProps) => {
           {/* Desktop Auth Buttons */}
           <div className="hidden md:flex items-center space-x-4">
             <a 
-              href="https://app.dynamopdf.com/login" 
+              href="https://app.curatepdf.com/login" 
               className="text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200"
             >
               Sign In
             </a>
             <a 
-              href="https://app.dynamopdf.com/signup" 
+              href="https://app.curatepdf.com/signup" 
               className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2.5 rounded-lg font-medium transition-all duration-200 transform hover:scale-105"
             >
               Get Started
@@ -119,13 +119,13 @@ const ModernHeader = (props: ModernHeaderProps) => {
               </a>
               <div className="pt-3 border-t border-gray-200 flex flex-col space-y-2">
                 <a 
-                  href="https://app.dynamopdf.com/login" 
+                  href="https://app.curatepdf.com/login" 
                   className="text-gray-700 hover:text-blue-600 font-medium py-2 px-4 rounded-lg hover:bg-gray-50 transition-colors duration-200"
                 >
                   Sign In
                 </a>
                 <a 
-                  href="https://app.dynamopdf.com/signup" 
+                  href="https://app.curatepdf.com/signup" 
                   className="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200 text-center"
                 >
                   Get Started

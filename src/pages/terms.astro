@@ -1,0 +1,322 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ModernHeader from '../components/ModernHeader.tsx';
+import Footer from '../components/Footer.astro';
+import { Image } from 'astro:assets';
+
+const pageTitle = "Terms of Conditions - CuratePDF | Service Agreement";
+const pageDescription = "Read CuratePDF's Terms of Conditions to understand your rights and responsibilities when using our PDF creation services.";
+const pageKeywords = "terms of conditions, service agreement, user agreement, terms of service, CuratePDF terms";
+---
+
+<Layout 
+  title={pageTitle}
+  description={pageDescription}
+  keywords={pageKeywords}
+>
+  <ModernHeader client:load>
+    <Image slot="imageComponent" src="/image.png" alt="CuratePDF Logo" width="70" height="70" loading="eager" />
+  </ModernHeader>
+  
+  <main class="min-h-screen bg-gradient-to-br from-purple-50 via-indigo-50 to-violet-50 pt-0">
+    <div class="max-w-4xl mx-auto px-6 py-24 mt-20">
+      <!-- Header -->
+      <div class="text-center mb-16">
+        <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          Terms of Conditions
+        </h1>
+        <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+          Please read these terms carefully before using CuratePDF. By accessing or using our services, you agree to be bound by these terms.
+        </p>
+        <div class="mt-6 text-sm text-gray-500">
+          Last updated: January 2024
+        </div>
+      </div>
+
+      <!-- Content -->
+      <div class="bg-white/60 backdrop-blur-sm rounded-2xl border border-gray-200 p-8 md:p-12">
+        <div class="prose prose-lg max-w-none">
+          
+          <!-- Introduction -->
+          <section class="mb-12">
+            <h2 class="text-2xl font-semibold text-gray-900 mb-4">1. Agreement to Terms</h2>
+            <p class="text-gray-700 leading-relaxed mb-4">
+              These Terms of Conditions ("Terms") constitute a legally binding agreement between you ("User," "you," or "your") and CuratePDF ("Company," "we," "us," or "our") regarding your use of our website and PDF creation services.
+            </p>
+            <p class="text-gray-700 leading-relaxed mb-4">
+              By accessing or using CuratePDF's services, you acknowledge that you have read, understood, and agree to be bound by these Terms. If you do not agree to these Terms, you may not access or use our services.
+            </p>
+            <p class="text-gray-700 leading-relaxed">
+              We reserve the right to modify these Terms at any time. Changes will be effective immediately upon posting. Your continued use of our services after any changes constitutes acceptance of the new Terms.
+            </p>
+          </section>
+
+          <!-- Service Description -->
+          <section class="mb-12">
+            <h2 class="text-2xl font-semibold text-gray-900 mb-4">2. Description of Services</h2>
+            <p class="text-gray-700 leading-relaxed mb-4">
+              CuratePDF provides online PDF creation, editing, and management services including but not limited to:
+            </p>
+            <ul class="list-disc pl-6 mb-6 text-gray-700 space-y-2">
+              <li>PDF document creation and generation</li>
+              <li>Template-based PDF creation</li>
+              <li>Document editing and modification tools</li>
+              <li>File conversion services</li>
+              <li>Document organization and management features</li>
+              <li>Collaboration and sharing capabilities</li>
+            </ul>
+            <p class="text-gray-700 leading-relaxed">
+              We reserve the right to modify, suspend, or discontinue any aspect of our services at any time, with or without notice.
+            </p>
+          </section>
+
+          <!-- User Accounts -->
+          <section class="mb-12">
+            <h2 class="text-2xl font-semibold text-gray-900 mb-4">3. User Accounts and Registration</h2>
+            
+            <h3 class="text-xl font-medium text-gray-800 mb-3">Account Creation</h3>
+            <p class="text-gray-700 leading-relaxed mb-4">
+              To access certain features of our services, you may be required to create an account. When creating an account, you agree to:
+            </p>
+            <ul class="list-disc pl-6 mb-6 text-gray-700 space-y-2">
+              <li>Provide accurate, current, and complete information</li>
+              <li>Maintain and update your account information</li>
+              <li>Keep your login credentials secure and confidential</li>
+              <li>Notify us immediately of any unauthorized use of your account</li>
+              <li>Accept responsibility for all activities under your account</li>
+            </ul>
+
+            <h3 class="text-xl font-medium text-gray-800 mb-3">Account Termination</h3>
+            <p class="text-gray-700 leading-relaxed">
+              We reserve the right to suspend or terminate your account if you violate these Terms or engage in activities that may harm our services or other users.
+            </p>
+          </section>
+
+          <!-- Acceptable Use -->
+          <section class="mb-12">
+            <h2 class="text-2xl font-semibold text-gray-900 mb-4">4. Acceptable Use Policy</h2>
+            <p class="text-gray-700 leading-relaxed mb-4">
+              You agree to use our services only for lawful purposes and in accordance with these Terms. You agree NOT to:
+            </p>
+            <ul class="list-disc pl-6 mb-6 text-gray-700 space-y-2">
+              <li>Upload, create, or share content that is illegal, harmful, threatening, or inappropriate</li>
+              <li>Violate any intellectual property rights of others</li>
+              <li>Use our services to transmit spam, malware, or other malicious code</li>
+              <li>Attempt to gain unauthorized access to our systems or other users' accounts</li>
+              <li>Interfere with or disrupt our services or servers</li>
+              <li>Use automated tools to access our services without permission</li>
+              <li>Engage in any activity that could damage our reputation or business</li>
+              <li>Reverse engineer, decompile, or attempt to extract source code</li>
+            </ul>
+          </section>
+
+          <!-- Content and Intellectual Property -->
+          <section class="mb-12">
+            <h2 class="text-2xl font-semibold text-gray-900 mb-4">5. Content and Intellectual Property</h2>
+            
+            <h3 class="text-xl font-medium text-gray-800 mb-3">User Content</h3>
+            <p class="text-gray-700 leading-relaxed mb-4">
+              You retain ownership of all content you upload, create, or generate using our services ("User Content"). By using our services, you grant us:
+            </p>
+            <ul class="list-disc pl-6 mb-6 text-gray-700 space-y-2">
+              <li>A limited, non-exclusive license to process your content to provide our services</li>
+              <li>The right to store and backup your content for service delivery</li>
+              <li>Permission to display your content back to you through our platform</li>
+            </ul>
+
+            <h3 class="text-xl font-medium text-gray-800 mb-3">Our Intellectual Property</h3>
+            <p class="text-gray-700 leading-relaxed mb-4">
+              CuratePDF and all related trademarks, logos, software, and content are owned by us or our licensors. You may not:
+            </p>
+            <ul class="list-disc pl-6 mb-6 text-gray-700 space-y-2">
+              <li>Copy, modify, or distribute our proprietary content</li>
+              <li>Use our trademarks or branding without written permission</li>
+              <li>Create derivative works based on our services</li>
+              <li>Remove or alter any copyright or proprietary notices</li>
+            </ul>
+          </section>
+
+          <!-- Privacy and Data -->
+          <section class="mb-12">
+            <h2 class="text-2xl font-semibold text-gray-900 mb-4">6. Privacy and Data Handling</h2>
+            <p class="text-gray-700 leading-relaxed mb-4">
+              Your privacy is important to us. Our collection and use of personal information is governed by our Privacy Policy, which is incorporated into these Terms by reference.
+            </p>
+            <p class="text-gray-700 leading-relaxed mb-4">
+              Regarding your documents and files:
+            </p>
+            <ul class="list-disc pl-6 mb-6 text-gray-700 space-y-2">
+              <li>We process your files only to provide our services</li>
+              <li>Files may be temporarily stored during processing</li>
+              <li>We implement security measures to protect your content</li>
+              <li>You can delete your files and account at any time</li>
+              <li>We do not claim ownership of your uploaded content</li>
+            </ul>
+          </section>
+
+          <!-- Payment Terms -->
+          <section class="mb-12">
+            <h2 class="text-2xl font-semibold text-gray-900 mb-4">7. Payment Terms and Subscriptions</h2>
+            
+            <h3 class="text-xl font-medium text-gray-800 mb-3">Pricing and Billing</h3>
+            <p class="text-gray-700 leading-relaxed mb-4">
+              Some features of our services may require payment. By subscribing to paid services, you agree to:
+            </p>
+            <ul class="list-disc pl-6 mb-6 text-gray-700 space-y-2">
+              <li>Pay all applicable fees as described in our pricing</li>
+              <li>Provide accurate billing information</li>
+              <li>Authorize automatic billing for subscription services</li>
+              <li>Pay any applicable taxes</li>
+            </ul>
+
+            <h3 class="text-xl font-medium text-gray-800 mb-3">Refunds and Cancellations</h3>
+            <p class="text-gray-700 leading-relaxed mb-4">
+              Refund and cancellation policies:
+            </p>
+            <ul class="list-disc pl-6 mb-6 text-gray-700 space-y-2">
+              <li>You may cancel your subscription at any time</li>
+              <li>Cancellations take effect at the end of your current billing period</li>
+              <li>Refunds are provided according to our refund policy</li>
+              <li>We reserve the right to modify pricing with notice</li>
+            </ul>
+          </section>
+
+          <!-- Service Availability -->
+          <section class="mb-12">
+            <h2 class="text-2xl font-semibold text-gray-900 mb-4">8. Service Availability and Performance</h2>
+            <p class="text-gray-700 leading-relaxed mb-4">
+              While we strive to provide reliable service, we cannot guarantee:
+            </p>
+            <ul class="list-disc pl-6 mb-6 text-gray-700 space-y-2">
+              <li>Uninterrupted access to our services</li>
+              <li>Error-free operation of all features</li>
+              <li>Compatibility with all devices or browsers</li>
+              <li>Prevention of data loss or corruption</li>
+            </ul>
+            <p class="text-gray-700 leading-relaxed">
+              We recommend regularly backing up important documents and data.
+            </p>
+          </section>
+
+          <!-- Disclaimers -->
+          <section class="mb-12">
+            <h2 class="text-2xl font-semibold text-gray-900 mb-4">9. Disclaimers and Warranties</h2>
+            <p class="text-gray-700 leading-relaxed mb-4">
+              OUR SERVICES ARE PROVIDED "AS IS" AND "AS AVAILABLE" WITHOUT WARRANTIES OF ANY KIND. WE DISCLAIM ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING:
+            </p>
+            <ul class="list-disc pl-6 mb-6 text-gray-700 space-y-2">
+              <li>Warranties of merchantability and fitness for a particular purpose</li>
+              <li>Warranties of non-infringement</li>
+              <li>Warranties regarding security, accuracy, or reliability</li>
+              <li>Warranties that our services will meet your requirements</li>
+            </ul>
+            <p class="text-gray-700 leading-relaxed">
+              Some jurisdictions do not allow certain warranty disclaimers, so some of these may not apply to you.
+            </p>
+          </section>
+
+          <!-- Limitation of Liability -->
+          <section class="mb-12">
+            <h2 class="text-2xl font-semibold text-gray-900 mb-4">10. Limitation of Liability</h2>
+            <p class="text-gray-700 leading-relaxed mb-4">
+              TO THE MAXIMUM EXTENT PERMITTED BY LAW, WE SHALL NOT BE LIABLE FOR:
+            </p>
+            <ul class="list-disc pl-6 mb-6 text-gray-700 space-y-2">
+              <li>Any indirect, incidental, special, or consequential damages</li>
+              <li>Loss of data, profits, or business opportunities</li>
+              <li>Damages resulting from unauthorized access to your account</li>
+              <li>Damages from service interruptions or security breaches</li>
+              <li>Any damages exceeding the amount paid by you in the last 12 months</li>
+            </ul>
+            <p class="text-gray-700 leading-relaxed">
+              This limitation applies regardless of the legal theory and even if we have been advised of the possibility of such damages.
+            </p>
+          </section>
+
+          <!-- Indemnification -->
+          <section class="mb-12">
+            <h2 class="text-2xl font-semibold text-gray-900 mb-4">11. Indemnification</h2>
+            <p class="text-gray-700 leading-relaxed">
+              You agree to indemnify, defend, and hold harmless CuratePDF and its affiliates from any claims, damages, losses, or expenses arising from your use of our services, violation of these Terms, or infringement of any third-party rights.
+            </p>
+          </section>
+
+          <!-- Governing Law -->
+          <section class="mb-12">
+            <h2 class="text-2xl font-semibold text-gray-900 mb-4">12. Governing Law and Dispute Resolution</h2>
+            <p class="text-gray-700 leading-relaxed mb-4">
+              These Terms are governed by and construed in accordance with applicable laws. Any disputes arising from these Terms or your use of our services will be resolved through:
+            </p>
+            <ul class="list-disc pl-6 mb-6 text-gray-700 space-y-2">
+              <li>Good faith negotiations between the parties</li>
+              <li>Binding arbitration if negotiations fail</li>
+              <li>Individual basis only (no class actions)</li>
+            </ul>
+          </section>
+
+          <!-- Severability -->
+          <section class="mb-12">
+            <h2 class="text-2xl font-semibold text-gray-900 mb-4">13. Severability and Entire Agreement</h2>
+            <p class="text-gray-700 leading-relaxed mb-4">
+              If any provision of these Terms is found to be unenforceable, the remaining provisions will continue in full force and effect.
+            </p>
+            <p class="text-gray-700 leading-relaxed">
+              These Terms, together with our Privacy Policy, constitute the entire agreement between you and CuratePDF regarding your use of our services.
+            </p>
+          </section>
+
+          <!-- Contact Information -->
+          <section class="mb-12">
+            <h2 class="text-2xl font-semibold text-gray-900 mb-4">14. Contact Information</h2>
+            <p class="text-gray-700 leading-relaxed mb-4">
+              If you have any questions about these Terms or our services, please contact us:
+            </p>
+            <div class="bg-gray-50 rounded-lg p-6 border border-gray-200">
+              <ul class="text-gray-700 space-y-2">
+                <li><strong>Email:</strong> hello@curatepdf.com</li>
+                <li><strong>Website:</strong> <a href="https://curatepdf.com" class="text-blue-600 hover:text-blue-800">https://curatepdf.com</a></li>
+              </ul>
+            </div>
+            <p class="text-gray-600 text-sm mt-4">
+              We will respond to your inquiry within 30 days of receipt.
+            </p>
+          </section>
+
+        </div>
+      </div>
+
+      <!-- Back to Home -->
+      <div class="text-center mt-12">
+        <a 
+          href="/" 
+          class="inline-flex items-center gap-2 bg-white hover:bg-gray-50 text-blue-600 border border-blue-200 px-6 py-3 rounded-lg font-semibold transition-all duration-200 hover:shadow-lg"
+        >
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+          </svg>
+          Back to Home
+        </a>
+      </div>
+    </div>
+  </main>
+  
+  <Footer />
+</Layout>
+
+<style>
+  .prose h2 {
+    @apply border-b border-gray-200 pb-2;
+  }
+  
+  .prose h3 {
+    @apply text-blue-700;
+  }
+  
+  .prose a {
+    @apply text-blue-600 hover:text-blue-800 underline;
+  }
+  
+  .prose strong {
+    @apply text-gray-900 font-semibold;
+  }
+</style> 

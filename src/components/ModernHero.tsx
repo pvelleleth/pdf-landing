@@ -51,7 +51,7 @@ const ModernHero = (props: ModernHeroProps) => {
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
             <a 
-              href="https://app.dynamopdf.com/signup" 
+              href="https://app.curatepdf.com/signup" 
               className="group bg-white hover:bg-gray-50 text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-200 transform hover:scale-105 hover:shadow-xl flex items-center gap-2"
             >
               Start Creating for Free
@@ -114,7 +114,7 @@ const ModernHero = (props: ModernHeroProps) => {
                   <div className="w-3 h-3 bg-yellow-400 rounded-full"></div>
                   <div className="w-3 h-3 bg-green-400 rounded-full"></div>
                 </div>
-                <div className="ml-4 text-sm text-gray-700">DynamoPDF - PDF Editor</div>
+                <div className="ml-4 text-sm text-gray-700">CuratePDF - PDF Editor</div>
               </div>
               
               {/* Actual app screenshot */}

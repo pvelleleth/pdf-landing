@@ -8,7 +8,7 @@ export interface Props {
 }
 
 const { 
-	title = "DynamoPDF - Automated PDF Creation Tool | Drag & Drop Editor + API", 
+	title = "CuratePDF - Automated PDF Creation Tool | Drag & Drop Editor + API", 
 	description = "Create professional PDFs with dynamic templates and automate document generation via API. Drag-and-drop editor for invoices, reports, and more. Start free today!",
 	keywords = "PDF creator, PDF generator, invoice generator, document automation, PDF templates, business documents",
 	image = "/landingpic.png",
@@ -31,7 +31,7 @@ const imageURL = new URL(image, Astro.site);
 		<meta name="description" content={description} />
 		<meta name="keywords" content={keywords} />
 		<meta name="robots" content="index, follow" />
-		<meta name="author" content="DynamoPDF Team" />
+		<meta name="author" content="CuratePDF Team" />
 		<meta name="revisit-after" content="7 days" />
 		<meta name="rating" content="general" />
 		<meta name="distribution" content="global" />
@@ -45,8 +45,8 @@ const imageURL = new URL(image, Astro.site);
 		<meta property="og:image" content={imageURL} />
 		<meta property="og:image:width" content="1200" />
 		<meta property="og:image:height" content="630" />
-		<meta property="og:image:alt" content="DynamoPDF - Professional PDF Creation Tool Interface" />
-		<meta property="og:site_name" content="DynamoPDF" />
+		<meta property="og:image:alt" content="CuratePDF - Professional PDF Creation Tool Interface" />
+		<meta property="og:site_name" content="CuratePDF" />
 		<meta property="og:locale" content="en_US" />
 		
 		<!-- Twitter -->
@@ -55,15 +55,15 @@ const imageURL = new URL(image, Astro.site);
 		<meta property="twitter:title" content={title} />
 		<meta property="twitter:description" content={description} />
 		<meta property="twitter:image" content={imageURL} />
-		<meta property="twitter:image:alt" content="DynamoPDF - Professional PDF Creation Tool Interface" />
-		<meta property="twitter:site" content="@dynamopdf" />
-		<meta property="twitter:creator" content="@dynamopdf" />
+		<meta property="twitter:image:alt" content="CuratePDF - Professional PDF Creation Tool Interface" />
+		<meta property="twitter:site" content="@curatepdf" />
+		<meta property="twitter:creator" content="@curatepdf" />
 		
 		<!-- Additional SEO Meta Tags -->
 		<meta name="theme-color" content="#3b82f6" />
 		<meta name="msapplication-TileColor" content="#3b82f6" />
-		<meta name="application-name" content="DynamoPDF" />
-		<meta name="apple-mobile-web-app-title" content="DynamoPDF" />
+		<meta name="application-name" content="CuratePDF" />
+		<meta name="apple-mobile-web-app-title" content="CuratePDF" />
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 		<meta name="apple-mobile-web-app-status-bar-style" content="default" />
 		<meta name="mobile-web-app-capable" content="yes" />
@@ -76,7 +76,7 @@ const imageURL = new URL(image, Astro.site);
 		<link rel="manifest" href="/site.webmanifest" />
 		
 		<!-- Preconnect to external domains -->
-		<link rel="preconnect" href="https://app.dynamopdf.com" />
+		<link rel="preconnect" href="https://app.curatepdf.com" />
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link rel="dns-prefetch" href="https://accounts.clerk.dev" />
@@ -86,34 +86,34 @@ const imageURL = new URL(image, Astro.site);
 			{
 				"@context": "https://schema.org",
 				"@type": "SoftwareApplication",
-				"name": "DynamoPDF",
-				"alternateName": "DynamoPDF PDF Creator",
+				"name": "CuratePDF",
+				"alternateName": "CuratePDF PDF Creator",
 				"applicationCategory": "BusinessApplication",
 				"operatingSystem": "Web",
 				"description": "Professional PDF creation tool with drag-and-drop editor for generating invoices, reports, and business documents with dynamic data binding",
-				"url": "https://dynamopdf.com",
-				"downloadUrl": "https://app.dynamopdf.com",
-				"screenshot": "https://dynamopdf.com/landingpic.png",
+				"url": "https://curatepdf.com",
+				"downloadUrl": "https://app.curatepdf.com",
+				"screenshot": "https://curatepdf.com/landingpic.png",
 				"softwareVersion": "2.0",
 				"datePublished": "2024-01-01",
 				"dateModified": "2024-01-15",
 				"author": {
 					"@type": "Organization",
-					"name": "DynamoPDF",
-					"url": "https://dynamopdf.com",
-					"logo": "https://dynamopdf.com/image.png",
+					"name": "CuratePDF",
+					"url": "https://curatepdf.com",
+					"logo": "https://curatepdf.com/image.png",
 					"sameAs": [
-						"https://twitter.com/dynamopdf",
-						"https://linkedin.com/company/dynamopdf",
-						"https://youtube.com/@dynamopdf"
+						"https://twitter.com/curatepdf",
+						"https://linkedin.com/company/curatepdf",
+						"https://youtube.com/@curatepdf"
 					]
 				},
 				"publisher": {
 					"@type": "Organization",
-					"name": "DynamoPDF",
+					"name": "CuratePDF",
 					"logo": {
 						"@type": "ImageObject",
-						"url": "https://dynamopdf.com/image.png"
+						"url": "https://curatepdf.com/image.png"
 					}
 				},
 				"offers": {
@@ -146,10 +146,10 @@ const imageURL = new URL(image, Astro.site);
 				"supportedDevice": ["Desktop", "Mobile", "Tablet"],
 				"requirements": "Web browser with JavaScript enabled",
 				"permissions": "No special permissions required",
-				"installUrl": "https://app.dynamopdf.com/signup",
+				"installUrl": "https://app.curatepdf.com/signup",
 				"softwareHelp": {
 					"@type": "CreativeWork",
-					"url": "https://dynamopdf.com/help"
+					"url": "https://curatepdf.com/help"
 				}
 			}
 		</script>
@@ -159,21 +159,21 @@ const imageURL = new URL(image, Astro.site);
 			{
 				"@context": "https://schema.org",
 				"@type": "Organization",
-				"name": "DynamoPDF",
-				"url": "https://dynamopdf.com",
-				"logo": "https://dynamopdf.com/image.png",
+				"name": "CuratePDF",
+				"url": "https://curatepdf.com",
+				"logo": "https://curatepdf.com/image.png",
 				"description": "Leading provider of professional PDF creation and automation tools for businesses worldwide",
 				"foundingDate": "2023",
 				"sameAs": [
-					"https://twitter.com/dynamopdf",
-					"https://linkedin.com/company/dynamopdf",
-					"https://youtube.com/@dynamopdf"
+					"https://twitter.com/curatepdf",
+					"https://linkedin.com/company/curatepdf",
+					"https://youtube.com/@curatepdf"
 				],
 				"contactPoint": {
 					"@type": "ContactPoint",
 					"telephone": "+1-555-PDF-CREATE",
 					"contactType": "Customer Service",
-					"email": "hello@dynamopdf.com",
+					"email": "hello@curatepdf.com",
 					"availableLanguage": "English"
 				},
 				"address": {
@@ -193,7 +193,7 @@ const imageURL = new URL(image, Astro.site);
 						"@type": "ListItem",
 						"position": 1,
 						"name": "Home",
-						"item": "https://dynamopdf.com"
+						"item": "https://curatepdf.com"
 					}
 				]
 			}
