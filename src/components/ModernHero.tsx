@@ -64,20 +64,6 @@ const ModernHero = (props: ModernHeroProps) => {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
             </a>
-            <a 
-              href="#demo" 
-              className="group bg-transparent hover:bg-white/60 text-gray-800 border-2 border-gray-400 hover:border-gray-600 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-200 flex items-center gap-2"
-            >
-              <svg 
-                className="w-5 h-5 group-hover:scale-110 transition-transform duration-200" 
-                fill="none" 
-                stroke="currentColor" 
-                viewBox="0 0 24 24"
-              >
-                <polygon points="5,3 19,12 5,21" fill="currentColor" />
-              </svg>
-              Watch Demo
-            </a>
           </div>
 
           {/* Trust indicators */}
