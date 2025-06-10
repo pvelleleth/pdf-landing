@@ -1,0 +1,83 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ModernHeader from '../../components/ModernHeader.tsx';
+import Footer from '../../components/Footer.astro';
+import BlogPost from '../../components/BlogPost.tsx';
+import { getBlogPost, getAllBlogPosts } from '../../lib/blogData';
+import { Image } from 'astro:assets';
+
+export async function getStaticPaths() {
+  const blogPosts = getAllBlogPosts();
+  
+  return blogPosts.map((post) => ({
+    params: { slug: post.id },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+
+if (!post) {
+  return Astro.redirect('/blog');
+}
+
+const pageTitle = `${post.title} | CuratePDF Blog`;
+const pageDescription = post.description;
+const pageKeywords = `${post.category}, CuratePDF, PDF tutorials, ${post.title}`;
+const canonicalUrl = `https://curatepdf.com/blog/${post.id}`;
+const imageUrl = post.image || '/landingpic.png';
+
+// Format date for structured data
+const formatDate = (dateString: string) => {
+  return new Date(dateString).toISOString();
+};
+---
+
+<Layout 
+  title={pageTitle} 
+  description={pageDescription} 
+  keywords={pageKeywords} 
+  image={imageUrl}
+  canonical={canonicalUrl}
+>
+  <ModernHeader client:load>
+    <Image slot="imageComponent" src="/image.png" alt="CuratePDF Logo" width="70" height="70" loading="eager" title="CuratePDF" />
+  </ModernHeader>
+
+  <main class="min-h-screen bg-gray-50">
+    <div class="px-6 py-8 pt-28">
+      <BlogPost post={post} backUrl="/blog" client:load />
+    </div>
+  </main>
+
+  <Footer />
+
+  <!-- Structured Data for SEO -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": post.title,
+    "description": post.description,
+    "image": imageUrl,
+    "author": {
+      "@type": "Organization",
+      "name": "CuratePDF Team"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "CuratePDF",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://curatepdf.com/image.png"
+      }
+    },
+    "datePublished": formatDate(post.pubDate),
+    "dateModified": formatDate(post.pubDate),
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": canonicalUrl
+    },
+    "articleSection": post.category,
+    "keywords": pageKeywords
+  })} />
+</Layout> 

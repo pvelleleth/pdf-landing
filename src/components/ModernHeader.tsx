@@ -28,11 +28,11 @@ const ModernHeader = (props: ModernHeaderProps) => {
       <nav className="max-w-6xl mx-auto px-6">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <div className="flex items-center space-x-1">
+          <a href="/" className="flex items-center space-x-1 hover:opacity-80 transition-opacity duration-200">
             {props.imageComponent}
             
             <span className="text-2xl font-bold text-gray-800">CuratePDF</span>
-          </div>
+          </a>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
