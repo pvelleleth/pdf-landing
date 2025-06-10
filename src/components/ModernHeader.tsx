@@ -28,11 +28,11 @@ const ModernHeader = (props: ModernHeaderProps) => {
       <nav className="max-w-6xl mx-auto px-6">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <div className="flex items-center space-x-1">
+          <a href="/" className="flex items-center space-x-1 hover:opacity-80 transition-opacity duration-200">
             {props.imageComponent}
             
             <span className="text-2xl font-bold text-gray-800">CuratePDF</span>
-          </div>
+          </a>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
@@ -42,11 +42,11 @@ const ModernHeader = (props: ModernHeaderProps) => {
             >
               Features
             </a>
-            <a 
-              href="#templates" 
+            <a
+              href="/blog"
               className="text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200"
             >
-              Templates
+              Blog
             </a>
             <a 
               href="#pricing" 
@@ -105,11 +105,11 @@ const ModernHeader = (props: ModernHeaderProps) => {
               >
                 Features
               </a>
-              <a 
-                href="#templates" 
+              <a
+                href="/blog"
                 className="text-gray-700 hover:text-blue-600 font-medium py-2 px-4 rounded-lg hover:bg-gray-50 transition-colors duration-200"
               >
-                Templates
+                Blog
               </a>
               <a 
                 href="#pricing" 
