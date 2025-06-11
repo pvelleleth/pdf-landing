@@ -11,7 +11,7 @@ const {
 	title = "CuratePDF - Automated PDF Creation Tool | Drag & Drop Editor + API", 
 	description = "Create professional PDFs with dynamic templates and automate document generation via API. Drag-and-drop editor for invoices, reports, and more. Start free today!",
 	keywords = "PDF creator, PDF generator, invoice generator, document automation, PDF templates, business documents",
-	image = "/landingpic.png",
+	image = "/social-preview.png",
 	canonical
 } = Astro.props;
 
@@ -53,6 +53,7 @@ const imageURL = new URL(image, Astro.site);
 		<!-- Discord-specific optimizations -->
 		<meta name="theme-color" content="#3b82f6" />
 		<meta property="og:image:secure_url" content={imageURL} />
+		<meta property="og:updated_time" content={new Date().toISOString()} />
 		
 		<!-- Twitter -->
 		<meta property="twitter:card" content="summary_large_image" />
@@ -65,7 +66,6 @@ const imageURL = new URL(image, Astro.site);
 		<meta property="twitter:creator" content="@curatepdf" />
 		
 		<!-- Additional SEO Meta Tags -->
-		<meta name="theme-color" content="#3b82f6" />
 		<meta name="msapplication-TileColor" content="#3b82f6" />
 		<meta name="application-name" content="CuratePDF" />
 		<meta name="apple-mobile-web-app-title" content="CuratePDF" />
@@ -105,7 +105,7 @@ const imageURL = new URL(image, Astro.site);
 				"description": "Professional PDF creation tool with drag-and-drop editor for generating invoices, reports, and business documents with dynamic data binding",
 				"url": "https://curatepdf.com",
 				"downloadUrl": "https://app.curatepdf.com",
-				"screenshot": "https://curatepdf.com/landingpic.png",
+				"screenshot": "https://curatepdf.com/social-preview.png",
 				"softwareVersion": "2.0",
 				"datePublished": "2024-01-01",
 				"dateModified": "2024-01-15",
